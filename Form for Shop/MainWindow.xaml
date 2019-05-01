@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Form_for_Shop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Movies" Height="450" Width="800">
     <Grid>
-        
+        <DockPanel>
+            <ToolBar Height="26" DockPanel.Dock="Top" Background="White">
+                <Button x:Name="ButtonCreate" Content="Create" Click="ButtonCreate_Click"></Button>
+                <Button x:Name ="ButtonConnect" Content="Connect" Click="ButtonConnect_Click"></Button>
+                <Button x:Name ="ButtonUpdate" Content="Update" Click="ButtonUpdate_Click"></Button>
+                <Button x:Name ="ButtonClearTable" Content="Clear Table" Click="ButtonClearTable_Click"></Button>
+                <Button x:Name ="ButtonAdd" Content="Add" Click="ButtonAdd_Click"></Button>
+            </ToolBar>
+            <StatusBar DockPanel.Dock="Bottom">
+                <StatusBarItem>
+                    <TextBlock Name="statusConnection" />
+                </StatusBarItem>
+            </StatusBar>
+            <DataGrid x:Name="dataGridMovies" AutoGenerateColumns="True" />
+        </DockPanel>
     </Grid>
+    
 </Window>
